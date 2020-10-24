@@ -19,11 +19,19 @@ export class HomePage {
     },
     {
       genre:'Vallenato',
-      imagen: 'assets/images/Avicii Make me.jpg',
+      imagen: 'assets/images/generos/vallenato.jpg',
+    },
+    {
+      genre:'Pop',
+      imagen: 'assets/images/generos/pop music.jpg',
     },
     {
       genre:'Rock',
       imagen: 'assets/images/generos/rock.jpg',
+    },
+    {
+      genre:'Urbano',
+      imagen: 'assets/images/generos/urbano.jpg',
     }
   ];
 

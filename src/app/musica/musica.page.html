@@ -12,9 +12,9 @@
   </ion-item>
 
   <ion-grid>
-    <ion-row class="forecast_container">
+    <ion-row>
       <ion-col size="5" *ngFor="let cancion of caratulas">
-        <ion-card *ngIf="genre == cancion.genre" (click)="iniciar(cancion)" >
+        <ion-card *ngIf="genre == caratulas.genre" (click)="iniciar(cancion)" >
           <ion-img [src]="cancion.caratulaAlbum"></ion-img>
           <ion-label>{{ cancion.nombre}} </ion-label>
         </ion-card>

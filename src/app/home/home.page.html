@@ -12,8 +12,8 @@
   </ion-item>
 
   <ion-grid>
-    <ion-row>
-      <ion-col size="7" *ngFor="let item of generos">
+    <ion-row class="forecast_container">
+      <ion-col size="7.5" *ngFor="let item of generos">
         <ion-card [routerLink]="['/musica', item.genre]">
           <ion-img [src]="item.imagen"></ion-img>
         </ion-card>

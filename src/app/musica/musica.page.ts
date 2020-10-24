@@ -53,7 +53,29 @@ export class MusicaPage{
       caratulaAlbum: 'assets/images/Galantis.jpg',
       song: 'assets/music/galantis-no-money-lyrics.mp3',
       artista: 'Galantis'
-    }
+    },
+    // VALLENATO
+    {
+      genre:'Vallenato',
+      nombre: 'Amor de locos',
+      caratulaAlbum: 'assets/images/amorDeLocos.jpg',
+      song: 'assets/music/amor-de-locos-video-oficial-peter-manjarres-ft-mono-zabaleta-dani-maestre.mp3',
+      artista: 'Peter Manjarres'
+    },
+    {
+      genre:'Vallenato',
+      nombre: 'La creciente',
+      caratulaAlbum: 'assets/images/rafael orozco.jpg',
+      song: 'assets/music/binomio-de-oro-rafael-orozco-la-creciente.mp3',
+      artista: 'Rafael Orozco'
+    },
+    {
+      genre:'Vallenato',
+      nombre: 'Sombra perdida',
+      caratulaAlbum: 'assets/images/rafael orozco.jpg',
+      song: 'assets/music/binomio-de-oro-rafael-orozco-la-creciente.mp3',
+      artista: 'Rafael Orozco'
+    },
   ];
 
   iniciarCancion: cancion = null;
