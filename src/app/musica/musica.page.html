@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Centro de música
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <h2 id="tituloCatalogo">Canciones</h2>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row class="forecast_container">
+      <ion-col size="5" *ngFor="let cancion of caratulas">
+        <ion-card *ngIf="genre == cancion.genre" (click)="iniciar(cancion)" >
+          <ion-img [src]="cancion.caratulaAlbum"></ion-img>
+          <ion-label>{{ cancion.nombre}} </ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button [routerLink]="['/home']">Volver</ion-button>
+
+</ion-content>
+
+<ion-footer *ngIf="iniciarCancion">
+  <ion-toolbar color="dark">
+    <ion-row class="ion-text-center">
+      <ion-col size="12" class="ion-text-center">
+        {{ iniciarCancion.nombre }}
+      </ion-col>
+      <ion-col size="12">
+        <ion-range #range [(ngModel)]="progreso" max="100" color="light" (touchend)="seek()" (mouseup)="seek()"></ion-range>
+      </ion-col>
+      <ion-col size="12">
+
+        <ion-button fill="clear" (click)="anterior()" color="light">
+          <ion-icon slot="icon-only" name="play-skip-back-outline"></ion-icon>
+        </ion-button>
+
+        <ion-button fill="clear" (click)="toggleReproductor(false)" *ngIf="!estaReproducion" color="light">
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+
+        <ion-button fill="clear" (click)="toggleReproductor(true)" *ngIf="estaReproducion" color="light">
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+
+        <ion-button fill="clear" (click)="siguiente()" color="light">
+          <ion-icon slot="icon-only" name="play-skip-forward-outline"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

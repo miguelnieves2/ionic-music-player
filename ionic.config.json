@@ -1,0 +1,7 @@
+{
+  "name": "myApp-Reproductor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

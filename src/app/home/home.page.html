@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Centro de música
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+  <h2 id="tituloCatalogo">Géneros</h2>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="7" *ngFor="let item of generos">
+        <ion-card [routerLink]="['/musica', item.genre]">
+          <ion-img [src]="item.imagen"></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <!--click)="cambiarPestana(item.genre)" -->
+    
+
+  <ion-button [routerLink]="['/musica']" >Musica</ion-button>
+
+</ion-content>
